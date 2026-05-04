@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Track Parcel — SwiftDrop Courier</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><span class="logo-icon"><i class="fas fa-bolt"></i></span>Swift<span>Drop</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="track.html" class="active">Track</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Get a Quote</a>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- TRACK HERO -->
+  <section class="page-hero track-hero">
+    <div class="container">
+      <p class="section-label">LIVE TRACKING</p>
+      <h1>Where Is Your <span class="accent">Parcel Right Now?</span></h1>
+      <p>Enter your tracking ID below for real-time updates and estimated delivery time.</p>
+
+      <div class="track-form-big">
+        <input type="text" id="trackInput" placeholder="Enter tracking ID (e.g. SD-208475)" />
+        <button onclick="trackParcel()" id="trackBtn"><i class="fas fa-search"></i> Track Now</button>
+      </div>
+      <p class="track-demo-hint">Try demo IDs: <span class="demo-id" onclick="fillDemo('SD-208475')">SD-208475</span>, <span class="demo-id" onclick="fillDemo('SD-319820')">SD-319820</span>, <span class="demo-id" onclick="fillDemo('SD-447291')">SD-447291</span></p>
+    </div>
+  </section>
+
+  <!-- TRACKING RESULT -->
+  <section class="tracking-result-section" id="trackResult" style="display:none;">
+    <div class="container">
+      <div class="tracking-card">
+        <div class="tracking-header">
+          <div>
+            <p class="tracking-id-label">Tracking ID</p>
+            <h2 id="resultId">SD-208475</h2>
+          </div>
+          <div class="tracking-status-badge" id="resultBadge">Out for Delivery</div>
+        </div>
+
+        <div class="tracking-meta">
+          <div class="meta-item"><i class="fas fa-map-marker-alt"></i><div><span>From</span><strong id="resultFrom">Jaipur, RJ</strong></div></div>
+          <div class="meta-arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+          <div class="meta-item"><i class="fas fa-map-pin"></i><div><span>To</span><strong id="resultTo">Delhi, DL</strong></div></div>
+          <div class="meta-item eta-item"><i class="fas fa-clock"></i><div><span>Estimated Delivery</span><strong id="resultEta">Today, 4:30 PM</strong></div></div>
+        </div>
+
+        <!-- TIMELINE -->
+        <div class="timeline">
+          <h3>Shipment Journey</h3>
+          <div class="timeline-track" id="timelineTrack">
+            <!-- populated by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">FREQUENTLY ASKED</p>
+        <h2>Tracking <span class="accent">FAQs</span></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><span>Where do I find my tracking ID?</span><i class="fas fa-plus"></i></div>
+          <div class="faq-a">Your tracking ID is sent via SMS and email immediately after booking. It starts with "SD-" followed by 6 digits.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><span>How often is tracking updated?</span><i class="fas fa-plus"></i></div>
+          <div class="faq-a">Tracking updates are pushed every 30 minutes at key checkpoints, and in real-time when out for delivery.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><span>My parcel shows "Delayed" — what should I do?</span><i class="fas fa-plus"></i></div>
+          <div class="faq-a">Delays are rare but can occur due to weather, high volume, or address issues. Contact our support team with your tracking ID for immediate assistance.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><span>Can I change the delivery address after shipping?</span><i class="fas fa-plus"></i></div>
+          <div class="faq-a">Address changes are possible if the parcel has not yet left the origin hub. Call us at +91 98765 43210 immediately after booking.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="logo"><span class="logo-icon"><i class="fas fa-bolt"></i></span>Swift<span>Drop</span></a><p>India's most trusted courier partner.</p></div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Express Delivery</a></li><li><a href="services.html">Pan-India Shipping</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><i class="fas fa-phone"></i> +91 98765 43210</li><li><i class="fas fa-envelope"></i> support@swiftdrop.in</li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>© 2024 SwiftDrop. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/track.js"></script>
+</body>
+</html>

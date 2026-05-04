@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SwiftDrop — Courier Services</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"><i class="fas fa-bolt"></i></span>
+        Swift<span>Drop</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="track.html">Track</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Get a Quote</a>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-label"><i class="fas fa-circle"></i> LIVE &amp; TRACKING NOW</p>
+      <h1 class="hero-title">Deliver<br><span class="accent">Faster.</span><br>Track Smarter.</h1>
+      <p class="hero-sub">SwiftDrop connects you with lightning-fast couriers across India. Real-time tracking, guaranteed timelines, zero compromise.</p>
+      <div class="hero-actions">
+        <a href="track.html" class="btn-primary">Track Your Parcel</a>
+        <a href="services.html" class="btn-ghost">Our Services <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">98%</span><span class="stat-label">On-time Rate</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">12K+</span><span class="stat-label">Daily Deliveries</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Cities Covered</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="delivery-card">
+        <div class="card-top">
+          <span class="card-badge"><i class="fas fa-truck"></i> Out for Delivery</span>
+          <span class="card-id">#SD-208475</span>
+        </div>
+        <div class="card-progress">
+          <div class="progress-step done"><i class="fas fa-check"></i><span>Picked Up</span></div>
+          <div class="progress-line full"></div>
+          <div class="progress-step done"><i class="fas fa-check"></i><span>In Transit</span></div>
+          <div class="progress-line half"></div>
+          <div class="progress-step active"><i class="fas fa-truck"></i><span>Out for Delivery</span></div>
+          <div class="progress-line"></div>
+          <div class="progress-step"><i class="fas fa-home"></i><span>Delivered</span></div>
+        </div>
+        <div class="card-eta">
+          <i class="fas fa-clock"></i> ETA: <strong>Today, 4:30 PM</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES HIGHLIGHT -->
+  <section class="services-highlight">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">WHAT WE OFFER</p>
+        <h2>Built for Speed,<br>Designed for <span class="accent">Reliability</span></h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon orange"><i class="fas fa-bolt"></i></div>
+          <h3>Express Delivery</h3>
+          <p>Same-day delivery within city limits. Order before 12 PM, delivered by 8 PM.</p>
+          <a href="services.html" class="service-link">Learn more <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="service-card featured">
+          <div class="service-icon white"><i class="fas fa-globe"></i></div>
+          <h3>Pan-India Shipping</h3>
+          <p>Reach anywhere across 500+ cities in 24–72 hours with full tracking.</p>
+          <a href="services.html" class="service-link">Learn more <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon orange"><i class="fas fa-boxes"></i></div>
+          <h3>Bulk Courier</h3>
+          <p>Special rates and dedicated handlers for high-volume business shipments.</p>
+          <a href="services.html" class="service-link">Learn more <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon orange"><i class="fas fa-temperature-low"></i></div>
+          <h3>Cold Chain Logistics</h3>
+          <p>Temperature-controlled shipping for medicines, perishables, and biologicals.</p>
+          <a href="services.html" class="service-link">Learn more <i class="fas fa-chevron-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRACK MINI SECTION -->
+  <section class="track-cta">
+    <div class="container">
+      <div class="track-cta-inner">
+        <div class="track-cta-text">
+          <h2>Know Where Your Parcel Is — <span class="accent">Right Now</span></h2>
+          <p>Enter your tracking ID and get live updates, ETA, and delivery confirmation in seconds.</p>
+        </div>
+        <div class="track-cta-form">
+          <input type="text" placeholder="Enter Tracking ID (e.g. SD-208475)" id="quickTrack" />
+          <button onclick="goTrack()"><i class="fas fa-search"></i> Track</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">HOW IT WORKS</p>
+        <h2>Ship in <span class="accent">3 Simple Steps</span></h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-number">01</div>
+          <div class="step-icon"><i class="fas fa-box-open"></i></div>
+          <h3>Book a Pickup</h3>
+          <p>Schedule a pickup online or via our app. We'll collect from your door.</p>
+        </div>
+        <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
+        <div class="step">
+          <div class="step-number">02</div>
+          <div class="step-icon"><i class="fas fa-truck-moving"></i></div>
+          <h3>We Handle Transit</h3>
+          <p>Your parcel is tracked at every checkpoint with real-time updates.</p>
+        </div>
+        <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
+        <div class="step">
+          <div class="step-number">03</div>
+          <div class="step-icon"><i class="fas fa-handshake"></i></div>
+          <h3>Doorstep Delivery</h3>
+          <p>Safe, signed delivery with digital proof. 100% satisfaction guaranteed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">WHAT CLIENTS SAY</p>
+        <h2>Trusted by <span class="accent">Thousands</span></h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"SwiftDrop delivered our bulk orders across 5 cities overnight. Absolutely flawless service!"</p>
+          <div class="testi-author"><div class="avatar">R</div><div><strong>Rahul Mehta</strong><span>Operations Head, RetailXpress</span></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"The real-time tracking is incredible. I always know exactly where my parcel is. Game changer!"</p>
+          <div class="testi-author"><div class="avatar">P">P</div><div><strong>Priya Sharma</strong><span>E-commerce Seller, Jaipur</span></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+          <p>"Cold chain logistics for our pharma deliveries — zero failures in 6 months. Highly recommended."</p>
+          <div class="testi-author"><div class="avatar">A</div><div><strong>Amit Joshi</strong><span>CEO, MedSupply India</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><span class="logo-icon"><i class="fas fa-bolt"></i></span>Swift<span>Drop</span></a>
+          <p>India's most trusted courier partner. Fast, reliable, transparent.</p>
+          <div class="socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Express Delivery</a></li>
+            <li><a href="services.html">Pan-India Shipping</a></li>
+            <li><a href="services.html">Bulk Courier</a></li>
+            <li><a href="services.html">Cold Chain</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+            <li><i class="fas fa-envelope"></i> support@swiftdrop.in</li>
+            <li><i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan, India</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 SwiftDrop. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
